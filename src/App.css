@@ -1,0 +1,212 @@
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+:root {
+  --Primary: #005eeb;
+  --FONT_Grey_999999: #999999;
+  --BabyBlue_DCE6FF: #dce6ff;
+  --WhiteText_F8F9FD: #f8f9fd;
+  /* Label */
+  --TITLE_000: #000000;
+  --TXT1_171719: #171719;
+  --TXT2_848588: #848588;
+  --TXT3_C7C8C9: #c7c8c9;
+  --TXT4_Disable: #dfdfe0;
+  /* BG */
+  --BG_FFFFFF: #ffffff;
+  --Basic_F7F7F8: #f7f7f8;
+  --Material-Dimmer: rgba(23, 23, 25, 0.52);
+  /* Interaction */
+  --Blue_F9FBFF: #f9fbff;
+  --Label_F8F8F8: #f8f8f8;
+  --Disable_F4F4F5: #f4f4f5;
+  /* Line */
+  --Normal_E0E0E2: #e0e0e2;
+  --Normal_70737C: #70737c;
+  --Neutral_E8E8EA: #e8e8ea;
+  --Alter_F4F4F5: #f4f4f5;
+  /* Status */
+  --Positive: #3385ff;
+  --Cautionary: #ff9200;
+  --Negative: #ff4242;
+  /* Component */
+  --Normal_F4F4F5: #f4f4f5;
+  --Strong_E8E8EA: #e8e8ea;
+  --Alternative_F8F8F8: #f8f8f8;
+  --Badge_EBF3FF: #ebf3ff;
+  /* ICO */
+  --Normal_171719: #171719;
+  --Alternative_989BA2: #989ba2;
+  --Assistive_C7C8C9: #c7c8c9;
+  --Disable_DFDFE0: #dfdfe0;
+  /* Badge */
+  --Badge2_F4EBFF: #f4ebff;
+  --Desktop-minWidth: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: bold;
+  min-width: var(--Desktop-minWidth);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--TXT4_Disable);
+  opacity: 1;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: var(--TXT4_Disable);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 2px;
+  border-radius: 4px;
+  border: 1px solid rgba(112, 115, 124, 0.22);
+  vertical-align: middle;
+  &:checked {
+    background-color: var(--Primary);
+    border-color: var(--Primary);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 5px;
+      width: 6px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  & + label {
+    display: inline-block;
+    padding: 2px 12px 0 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    vertical-align: middle;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+input[type='radio'] {
+  display: none;
+  width: 0;
+  height: 0;
+  &:checked {
+    & + label {
+      &::before {
+        border: 5px solid var(--Primary);
+      }
+    }
+  }
+  & + label {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    vertical-align: middle;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      margin-top: -2px;
+      border-radius: 100%;
+      border: 1px solid var(--Neutral_E8E8EA);
+      vertical-align: middle;
+    }
+  }
+}
+
+input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--Neutral_E8E8EA);
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml,%3Csvg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg id="01 align center"%3E%3Cpath id="Vector" d="M3.99993 3.75002C3.86863 3.75024 3.73857 3.72452 3.61724 3.67432C3.49591 3.62413 3.38569 3.55045 3.29293 3.45752L0.646431 0.810516L1.35343 0.103516L3.99993 2.75002L6.64643 0.103516L7.35343 0.810516L4.70693 3.45702C4.61421 3.55004 4.50401 3.62381 4.38268 3.67409C4.26135 3.72438 4.13127 3.75018 3.99993 3.75002Z" fill="%23171719"/%3E%3C/g%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+  background-size: 12px 12px;
+  outline: none;
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+  }
+}
+
+input[type='date']::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type='date']::-webkit-datetime-edit-text {
+  color: transparent;
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--Neutral_E8E8EA);
+  border-radius: 4px;
+  background-image: url('data:image/svg+xml,%3Csvg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg id="01 align center"%3E%3Cpath id="Vector" d="M3.99993 3.75002C3.86863 3.75024 3.73857 3.72452 3.61724 3.67432C3.49591 3.62413 3.38569 3.55045 3.29293 3.45752L0.646431 0.810516L1.35343 0.103516L3.99993 2.75002L6.64643 0.103516L7.35343 0.810516L4.70693 3.45702C4.61421 3.55004 4.50401 3.62381 4.38268 3.67409C4.26135 3.72438 4.13127 3.75018 3.99993 3.75002Z" fill="%23171719"/%3E%3C/g%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+  background-size: 12px 12px;
+  outline: none;
+}
+
+select:invalid {
+  color: #dfdfe0;
+}
+
+select option {
+  color: #171719;
+}

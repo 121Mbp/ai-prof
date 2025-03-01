@@ -1,0 +1,180 @@
+/* Search.module.css */
+@use 'components' as *;
+
+.searchBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: var(--Desktop-minWidth);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1004;
+  > button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    path {
+      fill: var(--BG_FFFFFF);
+    }
+  }
+  > form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: 152px auto 0;
+    padding: 16px 0;
+    border-bottom: 2px solid var(--BG_FFFFFF);
+    > input {
+      width: 100%;
+      height: 30px;
+      margin-right: 32px;
+      background-color: transparent;
+      color: var(--TXT4_Disable);
+      @extend %text-heading;
+      font-weight: 400;
+      outline: none;
+    }
+    > button {
+      > svg path {
+        fill: var(--BG_FFFFFF);
+      }
+    }
+  }
+}
+
+.searchPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  > form {
+    display: flex;
+    width: 454px;
+    height: 60px;
+    margin: 52px auto;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--Normal_E0E0E2);
+    background: var(--BG-BG_FFFFFF);
+    > button {
+      > svg {
+        width: 24px;
+        height: 24px;
+        path {
+          fill: var(--Normal_171719);
+        }
+      }
+    }
+    > input {
+      width: 100%;
+      margin-left: 32px;
+      @extend %text-body-short;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    width: 926px;
+    > ul {
+      display: flex;
+      border-bottom: 1px solid var(--Normal_E0E0E2);
+      > li {
+        position: relative;
+        padding-bottom: 16px;
+        margin-right: 32px;
+        color: var(--TXT3_C7C8C9);
+        @extend %text-body-short;
+        &.on {
+          color: var(--TXT1_171719);
+          > button {
+            font-weight: 700;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: var(--TXT1_171719);
+          }
+        }
+      }
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      > div {
+        display: flex;
+        width: 100%;
+        padding: 16px 0;
+        justify-content: space-between;
+        @extend %text-caption-regular;
+        > p {
+          color: var(--TXT2_848588);
+        }
+        > select {
+          width: auto;
+          padding: 0;
+          padding-right: 16px;
+          border: 0;
+          background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"%3E%3Cpath d="M6.8536 8.56726L10 4L2 4L5.15743 8.5654C5.24757 8.69829 5.37258 8.80786 5.52079 8.88386C5.669 8.95986 5.83557 8.99981 6.00496 9C6.17435 9.00018 6.34102 8.96059 6.48942 8.88492C6.63782 8.80924 6.76312 8.69996 6.8536 8.56726Z" fill="%23989BA2"/%3E%3C/svg%3E');
+          background-position: right center;
+        }
+      }
+      > ul {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 36px 0;
+        &.empty {
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          > li {
+            color: var(--TXT3_C7C8C9);
+            @extend %text-body-btn;
+          }
+        }
+        > li {
+          margin: 16px 0;
+          > a {
+            display: flex;
+            flex-direction: row;
+            height: 116px;
+            > div {
+              &:first-child {
+                width: 232px;
+                > div {
+                  width: 100%;
+                  height: 100%;
+                  background-size: cover;
+                  border-radius: 4px;
+                }
+                & + div {
+                  width: 100%;
+                  padding: 12px;
+                  @extend %badge;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

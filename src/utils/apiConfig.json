@@ -1,0 +1,68 @@
+{
+  "prof": {
+    "test": "/api/learning/receive-json",
+    "auth": {
+      "signin": "/api/users/login",
+      "me": "/api/users/info"
+    },
+    "department": {
+      "allList": "/api/department/all"
+    },
+    "metahuman": {
+      "allList": "/api/metahuman/metahuman",
+      "default": "/api/metahuman/default",
+      "character": "/api/metahuman/update-character",
+      "create": "/api/metahuman/generate",
+      "update": "/api/metahuman/update",
+      "copy": "/api/metahuman/copy",
+      "delete": "/api/metahuman/delete",
+      "thumbnail": "/api/metahuman/metahuman",
+      "videoGenerate": "/api/metahuman/generate-metahuman-video",
+      "videoDownload": "/api/metahuman/download-metahuman-video",
+      "encodingStatus": "/api/metahuman/encoding-progress-status",
+      "encodingCancel": "/api/metahuman/cancel-encoding",
+      "interactive": "/api/learning/intact/ask-llm",
+      "intactHistory": "/api/learning/intact/ask-llm-history"
+    },
+    "train": {
+      "allList": "/api/lectures/train/data"
+    },
+    "background": {
+      "allList": "/api/data/background",
+      "backgroundImage": "/api/data/background",
+      "defaultBackground": "/api/data/background-prfs?prfsId=",
+      "updateBackground": "/api/data/background-prfs-update"
+    },
+    "subject": {
+      "subjectInfo": "/api/subject/info",
+      "curriculum": "/api/subject/curriculum/generate"
+    },
+    "lecture": {
+      "allList": "/api/lectures/all",
+      "studSbjList": "/api/subject/student/available",
+      "profSbjList": "/api/subject/professor/available",
+      "deptCode": "/api/lectures/lectureByDeptCd",
+      "lectureInfo": "/api/lectures/info",
+      "lectureUpdateSave": "/api/lectures/update-lecture",
+      "scriptInfo": "/api/lectures/script-ppt",
+      "chapterInfo": "/api/lectures/chapter/info",
+      "create": "/api/lectures/create-Lecture",
+      "createScript": "/api/lectures/create",
+      "createChapter": "/api/lectures/index",
+      "thumbnail": "/api/data/thumbnail",
+      "chapterUpdate": "/api/lectures/chapters",
+      "chapterOrderUpdate": "/api/lectures/chapters/update-Chapter-Order"
+    },
+    "learning": {
+      "learningHistoryInfo": "/api/learning/history",
+      "learningHistory": "/api/learning/learning-history",
+      "learningComplete": "/api/learning/complete",
+      "learningActive": "/api/learning/active"
+    },
+    "video": {
+      "encoding": "/api/chapter/video/encoding",
+      "ppt": "/api/chapter/video/background/ppt",
+      "download": "/api/chapter/video"
+    }
+  }
+}
